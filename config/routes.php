@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Routes configuration.
  *
@@ -51,6 +52,8 @@ return static function (RouteBuilder $routes) {
          * to use (in this case, templates/Pages/home.php)...
          */
         $builder->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
+
+        $builder->connect('say-hello', ['controller' => 'Home', 'action' => 'sayHello']);
 
         /*
          * ...and connect the rest of 'Pages' controller's URLs.
